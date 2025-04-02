@@ -1,2 +1,1 @@
-# predica
-breast cancer prediction project
+breast cancer prediction web
