@@ -1,0 +1,50 @@
+.dashboard {
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  h1 {
+    color: #007bff;
+  }
+  
+  p {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .button_container button {
+    margin: 10px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .green_btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .green_btn:hover {
+    background-color: #218838;
+  }
+  
+  .white_btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .white_btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .logout_btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .logout_btn:hover {
+    background-color: #c82333;
+  }
+  

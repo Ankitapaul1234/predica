@@ -1,0 +1,141 @@
+/* About Predict Container */
+.precautionContainer {
+    background: radial-gradient(circle at 80% 80%, rgba(0, 102, 204, 0.1), transparent 70%), #000d1a;
+    color: white;
+    min-height: 100vh;
+    padding-top: 10px;
+    margin-top: 0px;
+    padding-left: 20px;
+  }
+  
+  /* Content Wrapper */
+.contentWrapper {
+    margin-top: 150px;
+    padding-left: 20px;
+  }
+
+
+
+/* Video Section Styling */
+.videoSection {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 25%; /* Reduced height further */
+    height: 0;
+    overflow: hidden;
+    max-width: 45%; /* Smaller width */
+    margin: 0 auto;
+    border-radius: 12px;
+  }
+  
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    .videoWrapper {
+      max-width: 80%;
+      padding-bottom: 45%; /* Slightly taller for small screens */
+    }
+  }
+  
+
+/* Image Container */
+.imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto; /* Changed to auto for better responsiveness */
+    margin-top: 80px;
+    padding-left: 20px;
+  }
+  
+  .image {
+    width: 100%;
+      max-width: 1000px; /*Increased size  */
+    height: auto;
+    object-fit: contain;
+  }
+  
+
+
+  .animatedImage {
+    animation: fadeInZoom 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeInZoom {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  } 
+
+
+  .image:hover {
+    transform: scale(1.1);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  
+  
+
+
+  /* Responsive Design for Images */
+  @media (max-width: 1200px) {
+    .image {
+      max-width: 800px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .image {
+      max-width: 600px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .image {
+      max-width: 100%; /* Make image full width on small screens */
+    }
+  }
+
+
+
+  .animatedButton {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .animatedButton:hover {
+    background-color: #d81b60;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .animatedButton:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  

@@ -1,0 +1,139 @@
+/* Contact Predict Container */
+/* .contactContainer {
+    background: radial-gradient(circle at 80% 80%, rgba(0, 102, 204, 0.1), transparent 70%), #000d1a;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-left: 20px;
+  } */
+  
+  /* Content Wrapper */
+  /* .contentWrapper {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 600px;
+    margin-top: 50px;
+  } */
+
+
+
+
+
+
+  
+/* Login Container (Centering the Form) */
+.contactContainer {
+    background: radial-gradient(circle at 80% 80%, rgba(0, 102, 204, 0.1), transparent 70%), #000d1a;
+	width: 100%;
+	height: 100vh; /* Full screen height */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed; /* Ensure the box is always on the middle. */
+	top: 0;
+	left: 0;
+	z-index: 999; /* Ensure it's above other content. */
+}
+
+/* Login Form Box */
+.contentWrapper {
+	width: 100%;
+	max-width: 450px;
+	background-color:  rgba(0, 0, 0, 0.8);
+	border-radius: 12px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+	padding: 30px;
+	text-align: center;
+}
+  
+  .title {
+    font-size: 2.5rem;
+    color: #e803a7;
+    margin-bottom: 20px;
+  }
+  
+  .successMessage {
+    color: #e803a7;
+    font-size: 1.2rem;
+  }
+  
+  .form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .form input, .form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    background-color: #333;
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  button {
+    background-color: #e803a7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #ff2fc7;
+  }
+  
+  .contactInfo {
+    margin-top: 40px;
+  }
+  
+  .contactInfo h2 {
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+  }
+  
+  .contactInfo p {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .contentWrapper {
+      padding: 20px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  }
+  
+
+  .contactInfo a {
+    color: #524ffe;
+    text-decoration: none;
+  }
+  
+  .contactInfo a:hover {
+    text-decoration: underline;
+  }
+  

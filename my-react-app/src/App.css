@@ -1,0 +1,48 @@
+/* Apply radial gradient as the background globally */
+body {
+  background: radial-gradient(circle at 80% 80%, rgba(0, 102, 204, 0.1), transparent 70%), #000d1a;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Optional: Ensure that the main container takes full height of the screen */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styling */
+.navbar {
+  padding: 20px;
+  background-color: #000d1a;
+  color: white;
+  font-size: 1.2rem;
+}
+
+/* Add any other global styles for fonts, links, etc. */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,240 @@
+.popup_overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(139, 0, 75, 0.6); /* Darker Pink overlay */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999; /* Ensures it appears above everything */
+	backdrop-filter: blur(8px); /* Adds a smoky white effect */
+}
+
+/* Popup Box */
+.popup_content {
+	background: rgba(245, 245, 245, 0.97); /* Smoky White background */
+	padding: 25px;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	width: 400px;
+	max-width: 90%;
+	position: relative;
+	animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Popup Heading */
+.popup_content h2 {
+	margin-bottom: 15px;
+	color: #8b004b; /* Darker Pink */
+	font-size: 24px;
+}
+
+/* Popup Text */
+.popup_content p {
+	margin-bottom: 20px;
+	color: #333;
+	font-size: 16px;
+}
+
+/* OK Button */
+.popup_content button {
+	background-color: #8b004b; /* Darker Pink */
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: 0.3s ease;
+}
+
+.popup_content button:hover {
+	background-color: #6b0037; /* Even Darker Pink */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+/* Signup Page Centering */
+.signup_container {
+	width: 100%;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #8b004b, #b3005e); /* Darker Pink Gradient */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+/* Signup form container */
+.signup_form_container {
+	width: 90%;
+	max-width: 900px;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	background-color: rgba(245, 245, 245, 0.95); /* Smoky White */
+	overflow: hidden;
+	padding: 20px;
+}
+
+/* Left panel (Sign In Section) */
+.left {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: rgba(139, 0, 75, 0.9); /* Darker Pink */
+	padding: 40px;
+	text-align: center;
+	color: white;
+	border-top-left-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
+/* Left Panel Text */
+.left h1 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	color: white;
+}
+
+/* Right panel (Signup form) */
+.right {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 40px;
+	background-color: rgba(245, 245, 245, 0.97); /* Smoky White */
+	border-top-right-radius: 12px;
+	border-bottom-right-radius: 12px;
+}
+
+/* Signup Form Title */
+.form_container h1 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	color: #8b004b; /* Dark Pink */
+	font-weight: bold;
+}
+
+/* Input fields */
+.input {
+	outline: none;
+	border: 2px solid #ddd;
+	width: 100%;
+	max-width: 370px;
+	padding: 12px;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #333;
+	transition: 0.3s;
+}
+
+.input:focus {
+	border-color: #8b004b; /* Dark Pink */
+	background-color: #fff;
+}
+
+/* Error message */
+.error_msg {
+	width: 100%;
+	max-width: 370px;
+	padding: 12px;
+	font-size: 14px;
+	background-color: #ff4d4d;
+	color: white;
+	border-radius: 8px;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+/* Buttons */
+.white_btn,
+.green_btn {
+	border: none;
+	outline: none;
+	padding: 12px 0;
+	border-radius: 25px;
+	width: 180px;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.3s ease-in-out;
+}
+
+/* Green button (Signup) */
+.green_btn {
+	background-color: #8b004b; /* Darker Pink */
+	color: white;
+	margin-top: 10px;
+	border: 2px solid transparent;
+}
+
+.green_btn:hover {
+	background-color: #6b0037; /* Even Darker Pink */
+	transform: scale(1.05);
+	border-color: white;
+}
+
+/* White button (Sign In) */
+.white_btn {
+	background-color: white;
+	color: #8b004b; /* Darker Pink */
+	border: 2px solid #8b004b;
+}
+
+.white_btn:hover {
+	background-color: #8b004b;
+	color: white;
+	transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.signup_form_container {
+		flex-direction: column;
+	}
+
+	.left, .right {
+		width: 100%;
+		text-align: center;
+		padding: 30px;
+	}
+
+	.input {
+		max-width: 100%;
+	}
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+

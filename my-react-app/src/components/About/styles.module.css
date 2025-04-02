@@ -1,0 +1,271 @@
+/* About Predict Container */
+.aboutContainer {
+    background: radial-gradient(circle at 80% 80%, rgba(0, 102, 204, 0.1), transparent 70%), #000d1a;
+    color: white;
+    min-height: 100vh;
+    padding-top: 10px;
+    margin-top: 0px;
+    padding-left: 20px;
+  }
+  
+  /* Content Wrapper */
+.contentWrapper {
+    margin-top: 150px;
+    padding-left: 20px;
+  }
+
+  /* Page Heading */
+  .aboutContainer h1 {
+    font-size: 3.5rem;
+    color: #ff4081;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+  
+  /* Description Section */
+  .aboutDescription {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 850px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Image Styling */
+  .aboutImage {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Button Styling */
+  .aboutButton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #ff4081;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .aboutButton:hover {
+    background-color: #d81b60;
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 800px) {
+    .aboutContainer h1 {
+      font-size: 2.8rem;
+    }
+  
+    .aboutDescription {
+      font-size: 1.1rem;
+      padding: 20px;
+    }
+  
+    .aboutButton {
+      font-size: 1.1rem;
+    }
+  
+    .aboutImage {
+      max-width: 450px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .aboutContainer h1 {
+      font-size: 2.4rem;
+    }
+  
+    .aboutDescription {
+      font-size: 1rem;
+      padding: 15px;
+    }
+  
+    .aboutButton {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  
+    .aboutImage {
+      max-width: 350px;
+    }
+  }
+  
+
+  /* FAQ Section */
+.faqContainer {
+    backdrop-filter: blur(15px); /* Add blur effect */
+    background-color: transparent; /* Fully transparent background */
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .faqItem {
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    /* backdrop-filter: blur(10px); Default blur */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    transition:
+      transform 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out,
+      background-color 0.3s ease; /* Added background-color transition */
+    position: relative; /* Needed for the ::before pseudo-element */
+    overflow: hidden; /* Prevents the ::before from overflowing */
+  }
+  
+ 
+  
+  /* Adding a subtle "glow" effect */
+  .faqItem::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0) 100%
+    ); /* Transparent white gradient */
+    opacity: 0; /* Initially hidden */
+    /* transition: opacity 0.3s ease; Transition for opacity */
+    pointer-events: none; /* Allows clicks to pass through the pseudo-element */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+    /* Ensure Clear Text Rendering */
+  .faqItem, .faqQuestionButton, .faqAnswer {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+  }
+  
+  .faqItem:hover::before {
+    opacity: 1; /* Show the glow on hover */
+  }
+  
+  .faqQuestionButton {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #e91e63;
+    cursor: pointer;
+    padding: 12px;
+    border: none;
+    background: none;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem; /* Decreased font size for better responsiveness */
+  }
+  
+  .faqQuestionButton:hover {
+    background-color: rgba(233, 30, 99, 0.1);
+  }
+  
+  .faqAnswer {
+    color: rgb(255, 255, 255);
+    padding: 12px;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  
+  /* Footer */
+  .transparentFooter {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  
+  .footer {
+    background-color: rgba(0, 0, 0, 0.3); /* Make it slightly transparent */
+    color: white; /* Ensure text is readable on transparent background */
+  }
+  
+
+
+
+
+
+
+  /* Image Container */
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; /* Changed to auto for better responsiveness */
+  margin-top: 80px;
+  padding-left: 20px;
+}
+
+.image {
+  width: 100%;
+    max-width: 1000px; /*Increased size  */
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+.animatedImage {
+  animation: fadeInZoom 1.5s ease-in-out;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+} 
+
+
+.image:hover {
+  transform: scale(1.1);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+
+
+
+/* Responsive Design for Images */
+@media (max-width: 1200px) {
+  .image {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 900px) {
+  .image {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .image {
+    max-width: 100%; /* Make image full width on small screens */
+  }
+}

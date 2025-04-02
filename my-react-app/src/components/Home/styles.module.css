@@ -1,0 +1,377 @@
+/* Home Container */
+.homeContainer {
+  background: radial-gradient(circle at 80% 80%, rgba(0, 102, 204, 0.1), transparent 70%), #000d1a;
+  color: white;
+  min-height: 100vh;
+  padding-top: 10px;
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+/* Content Wrapper */
+.contentWrapper {
+  margin-top: 150px;
+  padding-left: 20px;
+}
+
+/* Image Container */
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto; /* Changed to auto for better responsiveness */
+  margin-top: 80px;
+  padding-left: 20px;
+}
+
+.image {
+  width: 100%;
+  max-width: 1000px; /* Increased size */
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+.animatedImage {
+  animation: fadeInZoom 1.5s ease-in-out;
+}
+
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+} 
+
+
+.image:hover {
+  transform: scale(1.1);
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Responsive Design for Images */
+@media (max-width: 1200px) {
+  .image {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 900px) {
+  .image {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .image {
+    max-width: 100%; /* Make image full width on small screens */
+  }
+}
+
+/* Headings */
+h2 {
+  color: rgba(240, 36, 165, 0.949);
+}
+
+/* Feature Section */
+.featureSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  overflow: hidden;
+}
+
+.sectionTitle {
+  font-size: 2.5rem; /* Decreased font size for better responsiveness */
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #e91e63;
+  text-align: center;
+}
+
+.featureGrid {
+  display: flex;
+  flex-wrap: nowrap; /* Allow wrapping for smaller screens */
+  gap: 20px;
+  width: fit-content;
+  padding: 20px 0;
+  animation: moveFeatureBox 20s linear infinite;
+}
+
+/* Feature Box */
+.featureBox {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px); /* Default blur */
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  flex: 0 0 auto;
+  width: 350px; /* Increased size */
+  height: 250px; /* Increased height */
+}
+
+.featureBox:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 20px rgba(233, 30, 99, 0.8);
+  border-color: #e91e63;
+}
+
+.featureBox h3 {
+  font-size: 1.5rem; /* Decreased font size for better responsiveness */
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.featureBox p {
+  color: #ddd;
+  font-size: 1rem; /* Decreased font size for better responsiveness */
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .featureBox {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .featureBox {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 600px) {
+  .featureGrid {
+    flex-direction: column; /* Stack items vertically */
+    animation: none; /* Disable animation for small screens */
+  }
+
+  .featureBox {
+    max-width: 100%; /* Full width on small screens */
+    backdrop-filter: blur(5px); /* Reduced blur for small screens */
+  }
+}
+
+/* FAQ Section */
+.faqContainer {
+  backdrop-filter: blur(15px); /* Add blur effect */
+  background-color: transparent; /* Fully transparent background */
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.faqItem {
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  /* backdrop-filter: blur(10px); Default blur */
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out,
+    background-color 0.3s ease; /* Added background-color transition */
+  position: relative; /* Needed for the ::before pseudo-element */
+  overflow: hidden; /* Prevents the ::before from overflowing */
+}
+
+.faqItem:hover {
+  transform: translateY(-5px); /* Increased lift */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow and opacity */
+  background-color: rgba(255, 255, 255, 0.15); /* Slight background color change on hover */
+}
+
+/* Adding a subtle "glow" effect */
+.faqItem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0) 100%
+  ); /* Transparent white gradient */
+  opacity: 0; /* Initially hidden */
+  /* transition: opacity 0.3s ease; Transition for opacity */
+  pointer-events: none; /* Allows clicks to pass through the pseudo-element */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+  /* Ensure Clear Text Rendering */
+.faqItem, .faqQuestionButton, .faqAnswer {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+}
+
+.faqItem:hover::before {
+  opacity: 1; /* Show the glow on hover */
+}
+
+.faqQuestionButton {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #e91e63;
+  cursor: pointer;
+  padding: 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem; /* Decreased font size for better responsiveness */
+}
+
+.faqQuestionButton:hover {
+  background-color: rgba(233, 30, 99, 0.1);
+}
+
+.faqAnswer {
+  color: rgb(255, 255, 255);
+  padding: 12px;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* Footer */
+.transparentFooter {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.3); /* Make it slightly transparent */
+  color: white; /* Ensure text is readable on transparent background */
+}
+
+/* Media Queries for Small Screens */
+@media (max-width: 600px) {
+  .sectionTitle {
+    font-size: 2rem; /* Decrease section title size */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Decrease h2 size */
+  }
+
+  h3 {
+    font-size: 1.2rem; /* Decrease h3 size */
+  }
+
+  .featureBox h3 {
+    font-size: 1.5rem; /* Decrease feature box title size */
+  }
+
+  .featureBox h4 {
+    font-size: 0.9rem; /* Decrease feature box paragraph size */
+  }
+  .faqAnswer h4{
+    font-size: 1px;
+  }
+
+}
+
+/* Animation */
+@keyframes moveFeatureBox {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 2.5)); /* Adjusted for larger boxes */
+  }
+}
+
+
+
+
+/* Media Queries for Small Screens */
+@media (max-width: 600px) {
+  .sectionTitle {
+    font-size: 2rem; /* Decrease section title size */
+  }
+
+  h2 {
+    font-size: 2rem; /* Decrease h2 size */
+  }
+
+  h3 {
+    font-size: 1.3rem; /* Decrease h3 size */
+  }
+
+  .featureBox h3 {
+    font-size: 1.5rem; /* Decrease feature box title size */
+  }
+
+  .featureBox p {
+    font-size: 1.5rem; /* Decrease feature box paragraph size */
+  }
+  li{
+    font-size:x-large;
+  }
+
+}
+
+
+
+
+
+
+
+.animatedButton {
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.animatedButton:hover {
+  background-color: #d81b60;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(72, 72, 72, 0.2);
+}
+
+.animatedButton:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
