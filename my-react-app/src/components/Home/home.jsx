@@ -282,6 +282,7 @@ import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 import Login from "../Login";
 import { useNavigate } from "react-router-dom";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 
 
@@ -473,7 +474,10 @@ const Home = () => {
         </div>
         {/* Footer Section */}
         <footer className={styles.footer}>
+        <p><FaPhone /> +914567890235</p>
+        <p><FaEnvelope /> <a href="mailto:Predica@gmail.com">Predica@gmail.com</a></p>
           <p>© 2024 Predica. All rights reserved.</p>
+          
         </footer>
       </div>
     </>

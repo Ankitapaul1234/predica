@@ -2,8 +2,15 @@
 import React from "react";
 import Navbar from "../navbar/Navbar";
 import styles from "./styles.module.css";
+import { useNavigate } from 'react-router-dom';
 
 const Precaution = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/hospitals');
+  };
+
   return (
     <>
       <div className={styles.precautionContainer}>
@@ -170,10 +177,16 @@ const Precaution = () => {
 
             <br />
 
-            <p>For a doctor’s appointment, click the button below to find Oncologists in your area:</p>
+            {/* <p>For a doctor’s appointment, click the button below to find Oncologists in your area:</p>
             <a href="https://www.justdial.com/Kolkata/Oncologists-in-Narendrapur/nct-10343365" target="_blank" rel="noopener noreferrer">
               <button className={styles.animatedButton}>Find Oncologists</button>
-            </a>
+            </a> */}
+
+
+<h3>Find your nearest hospitals:</h3>
+<button className="animatedButton" onClick={handleClick}>
+      Find Oncologists
+    </button>
 
 
           </section>        
