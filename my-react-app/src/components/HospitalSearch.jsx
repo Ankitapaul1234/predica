@@ -104,12 +104,6 @@ const HospitalLocator = () => {
         >
           Find Cancer Hospitals
         </button>
-        <button
-          onClick={() => findHospitals("Breast")}
-          className="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 transition"
-        >
-          Find Breast Cancer Hospitals
-        </button>
       </div>
 
       {loading && <p className="mt-4 text-black text-center">Searching for hospitals...</p>}
@@ -175,3 +169,21 @@ const HospitalLocator = () => {
 };
 
 export default HospitalLocator;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

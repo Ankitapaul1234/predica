@@ -185,7 +185,7 @@ const Precaution = () => {
 
 <h3>Find your nearest hospitals:</h3>
 <button className="animatedButton" onClick={handleClick}>
-      Find Oncologists
+      Find cancerous hospitals
     </button>
 
 
