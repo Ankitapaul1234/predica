@@ -118,6 +118,7 @@ import Precaution from "./components/Precaution/precaution";
 import AboutPredict from "./components/About/about";
 import Contact from "./components/Contact/contact";
 import HospitalSearch from "./components/HospitalSearch";  // ✅ Import HospitalSearch
+import DrAi from "./components/chatbot/DrAi";
 import './App.css'; // Import global styles
 
 function App() {
@@ -125,6 +126,8 @@ function App() {
 
   return (
     <Router>
+      {/* ✅ DrAi floats on top of all routes */}
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
@@ -133,6 +136,7 @@ function App() {
         <Route path="/prediction" element={user ? <Predict /> : <Navigate to="/login" />} />
         <Route path="/about-predict" element={<AboutPredict />} />
         <Route path="/precaution" element={<Precaution />} />
+        <Route path="/drai" element={<DrAi />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/hospitals" element={<HospitalSearch />} />
       </Routes>
