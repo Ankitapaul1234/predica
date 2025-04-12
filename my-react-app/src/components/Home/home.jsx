@@ -283,7 +283,9 @@ import { Link } from "react-router-dom";
 import Login from "../Login";
 import { useNavigate } from "react-router-dom";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-
+import { motion } from "framer-motion";
+// import TestimonialsSection from "../Testimonial/testi";
+import TestimonialsSection from "../Testimonial/testi";
 
 
 const Home = () => {
@@ -430,6 +432,10 @@ const Home = () => {
                 </div>
               </div>
             </section>
+
+
+
+<TestimonialsSection />
 
             {/* FAQ Section */}
             <section className={styles.faqSection}>
