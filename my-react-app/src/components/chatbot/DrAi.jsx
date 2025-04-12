@@ -1,82 +1,170 @@
 
+// import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
+// import {
+//   MainContainer,
+//   ChatContainer,
+//   MessageList,
+//   Message,
+//   MessageInput,
+// } from "@chatscope/chat-ui-kit-react";
+// import { useState } from "react";
+// import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// import React, { useState } from 'react';
-// import axios from 'axios';
-// import './DrAi.css';
+// export const DrAi = () => {
+//   const [userInput, setUserInput] = useState("");
+//   const [chatHistory, setChatHistory] = useState([]);
 
-// // import { GEMINI_API_KEY } from "./config";
-// // const API_KEY = GEMINI_API_KEY;
+//   const handleUserInput = (value) => {
+//     console.log(value);
+//     setUserInput(value);
+//   };
+//   const genAI = new GoogleGenerativeAI(import.meta.env.VITE_API_KEY);
+//   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
+//   const sendMessage = async (messageText) => {
+//     if (messageText.trim() === "") return;
+
+//     try {
+//       const prompt = messageText;
+//       const result = await model.generateContent(prompt);
+//       const response = result.response;
+//       const text = response.text();
+//       setChatHistory((prev) => [
+//         ...prev,
+//         { type: "user", message: messageText },
+//         { type: "bot", message: text },
+//       ]);
+//       setUserInput("");
+//       console.log(text);
+//     } catch (e) {
+//       console.log("Error occurred while fetching", e);
+//     }
+//   };
+
+//   return (
+//     <div style={{ position: "relative", height: "500px" }}>
+//       <MainContainer>
+//         <ChatContainer>
+//           <MessageList>
+//             {chatHistory.map((elt, i) => (
+//               <Message
+//                 key={i}
+//                 model={{
+//                   message: elt.message,
+//                   sender: elt.type,
+//                   sentTime: "just now",
+
+//                   direction: elt.type === "user" ? "outgoing" : "incoming",
+//                 }}
+//               />
+//             ))}
+//           </MessageList>
+//           <MessageInput
+//             placeholder="Type message here"
+//             value={userInput}
+//             onChange={(value) => handleUserInput(value)}
+//             onSend={sendMessage}
+//           />
+//         </ChatContainer>
+//       </MainContainer>
+//     </div>
+//   );
+// };
+// export default DrAi;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
+// import {
+//   MainContainer,
+//   ChatContainer,
+//   MessageList,
+//   Message,
+//   MessageInput,
+// } from "@chatscope/chat-ui-kit-react";
+// import { useState } from "react";
+// import { GoogleGenerativeAI } from "@google/generative-ai";
+// import "./DrAi.css"; // Custom CSS
 
 // const DrAi = () => {
-//     const [inputValue, setInputValue] = useState('');
-//     const [messages, setMessages] = useState([]);
-//     const [isLoading, setIsLoading] = useState(false);
+//   const [userInput, setUserInput] = useState("");
+//   const [chatHistory, setChatHistory] = useState([]);
 
-//     const handleInputChange = (e) => {
-//         setInputValue(e.target.value);
-//     };
+//   const handleUserInput = (value) => {
+//     setUserInput(value);
+//   };
 
-//     const handleSendMessage = async () => {
-//         if (inputValue.trim() === '') return;
+//   const genAI = new GoogleGenerativeAI(import.meta.env.VITE_API_KEY);
+//   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-//         const userMessage = { role: 'user', content: inputValue };
-//         setMessages((prev) => [...prev, userMessage]);
-//         setIsLoading(true);
+//   const sendMessage = async (messageText) => {
+//     if (messageText.trim() === "") return;
 
-//         try {
-//             const response = await axios.post(
-//                 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent',
-//                 {
-//                     contents: [{ parts: [{ text: inputValue }] }],
-//                 },
-//                 {
-//                     headers: {
-//                         'Authorization': `Bearer ${process.env.REACT_APP_GEMINI_API_KEY}`,
-//                         'Content-Type': 'application/json',
-//                     },
-//                 }
-//             );
+//     try {
+//       const result = await model.generateContent(messageText);
+//       const response = result.response;
+//       const text = response.text();
+//       setChatHistory((prev) => [
+//         ...prev,
+//         { type: "user", message: messageText },
+//         { type: "bot", message: text },
+//       ]);
+//       setUserInput("");
+//     } catch (e) {
+//       console.error("Error occurred while fetching", e);
+//     }
+//   };
 
-//             const botContent = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response from DrAi.";
-//             const botMessage = { role: 'bot', content: botContent };
-//             setMessages((prev) => [...prev, botMessage]);
-//         } catch (error) {
-//             console.error('Error sending message:', error);
-//             setMessages((prev) => [...prev, {
-//                 role: 'bot',
-//                 content: "Hi there! DrAi is facing some issues right now."
-//             }]);
-//         } finally {
-//             setInputValue('');
-//             setIsLoading(false);
-//         }
-//     };
-
-//     return (
-//         <div className="chatbot-container">
-//             <div className="message-list">
-//                 {messages.map((msg, index) => (
-//                     <p key={index} className={`message ${msg.role}`}>
-//                         {msg.content}
-//                     </p>
-//                 ))}
-//                 {isLoading && (
-//                     <p className="message bot">DrAi is typing...</p>
-//                 )}
-//             </div>
-//             <div className="input-area">
-//                 <input
-//                     type="text"
-//                     value={inputValue}
-//                     onChange={handleInputChange}
-//                     className="input-field"
-//                     placeholder="Type your message..."
-//                 />
-//                 <button onClick={handleSendMessage} className="send-button">Send</button>
-//             </div>
-//         </div>
-//     );
+//   return (
+//     <div className="chat-wrapper">
+//       <MainContainer>
+//         <ChatContainer>
+//           <MessageList>
+//             {chatHistory.map((elt, i) => (
+//               <Message
+//                 key={i}
+//                 model={{
+//                   message: elt.message,
+//                   sender: elt.type,
+//                   sentTime: "just now",
+//                   direction: elt.type === "user" ? "outgoing" : "incoming",
+//                 }}
+//               />
+//             ))}
+//           </MessageList>
+//           <MessageInput
+//             placeholder="Type message here"
+//             value={userInput}
+//             onChange={(val) => handleUserInput(val)}
+//             onSend={sendMessage}
+//           />
+//         </ChatContainer>
+//       </MainContainer>
+//     </div>
+//   );
 // };
 
 // export default DrAi;
@@ -87,79 +175,104 @@
 
 
 
-import React, { useState } from 'react';
-import axios from 'axios';
-import './DrAi.css';
+
+
+
+
+
+
+
+
+
+
+
+
+import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
+import {
+  MainContainer,
+  ChatContainer,
+  MessageList,
+  Message,
+  MessageInput,
+} from "@chatscope/chat-ui-kit-react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { GoogleGenerativeAI } from "@google/generative-ai";
+import "./DrAi.css";
 
 const DrAi = () => {
-    const [inputValue, setInputValue] = useState('');
-    const [messages, setMessages] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
+  const [userInput, setUserInput] = useState("");
+  const [chatHistory, setChatHistory] = useState([]);
+  const navigate = useNavigate();
 
-    const handleInputChange = (e) => {
-        setInputValue(e.target.value);
-    };
+  const handleUserInput = (value) => {
+    setUserInput(value);
+  };
 
-    const handleSendMessage = async () => {
-        if (inputValue.trim() === '') return;
+  const genAI = new GoogleGenerativeAI(import.meta.env.VITE_API_KEY);
+  const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-        const userMessage = { role: 'user', content: inputValue };
-        setMessages((prev) => [...prev, userMessage]);
-        setIsLoading(true);
+  const sendMessage = async (messageText) => {
+    if (messageText.trim() === "") return;
 
-        try {
-            const response = await axios.post(
-                'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent',
-                {
-                    contents: [{ parts: [{ text: inputValue }] }],
-                },
-                {
-                    headers: {
-                        'Authorization': `Bearer ${import.meta.env.VITE_GEMINI_API_KEY}`,
-                        'Content-Type': 'application/json',
-                    },
-                }
-            );
+    try {
+      const result = await model.generateContent(messageText);
+      const response = result.response;
+      const text = response.text();
+      setChatHistory((prev) => [
+        ...prev,
+        { type: "user", message: messageText },
+        { type: "bot", message: text },
+      ]);
+      setUserInput("");
+    } catch (e) {
+      console.error("Error occurred while fetching", e);
+    }
+  };
 
-            const botContent = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "No response from DrAi.";
-            const botMessage = { role: 'bot', content: botContent };
-            setMessages((prev) => [...prev, botMessage]);
-        } catch (error) {
-            console.error('Error sending message:', error);
-            setMessages((prev) => [...prev, {
-                role: 'bot',
-                content: "Hi there! DrAi is facing some issues right now."
-            }]);
-        } finally {
-            setInputValue('');
-            setIsLoading(false);
-        }
-    };
+  return (
+    <div className="chat-wrapper" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <MainContainer style={{ width: "100%", maxWidth: "800px", height: "600px" }}>
+        <ChatContainer>
+          <MessageList>
+            {chatHistory.map((elt, i) => (
+              <Message
+                key={i}
+                model={{
+                  message: elt.message,
+                  sender: elt.type,
+                  sentTime: "just now",
+                  direction: elt.type === "user" ? "outgoing" : "incoming",
+                }}
+              />
+            ))}
+          </MessageList>
+          <MessageInput
+            placeholder="Type message here"
+            value={userInput}
+            onChange={(val) => handleUserInput(val)}
+            onSend={sendMessage}
+          />
+        </ChatContainer>
+      </MainContainer>
 
-    return (
-        <div className="chatbot-container">
-            <div className="message-list">
-                {messages.map((msg, index) => (
-                    <p key={index} className={`message ${msg.role}`}>
-                        {msg.content}
-                    </p>
-                ))}
-                {isLoading && (
-                    <p className="message bot">DrAi is typing...</p>
-                )}
-            </div>
-            <div className="input-area">
-                <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleInputChange}
-                    className="input-field"
-                    placeholder="Type your message..."
-                />
-                <button onClick={handleSendMessage} className="send-button">Send</button>
-            </div>
-        </div>
-    );
+      {/* Go to Home Button UNDER the chat UI */}
+      <button
+        onClick={() => navigate("/")}
+        style={{
+          marginTop: "20px",
+          padding: "10px 20px",
+          backgroundColor: "#2d89ef",
+          color: "#fff",
+          border: "none",
+          borderRadius: "6px",
+          cursor: "pointer",
+        }}
+      >
+        Go to Home
+      </button>
+    </div>
+  );
 };
 
 export default DrAi;

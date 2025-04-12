@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^2.0.3",
     "@google/generative-ai": "^0.24.0",
     "axios": "^1.8.4"
   }

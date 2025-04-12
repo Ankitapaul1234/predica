@@ -1,175 +1,55 @@
-/* .drai-float-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #ff4081;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  z-index: 999;
-}
+/* DrAi.css */
 
-.drai-container {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 300px;
-  max-height: 500px;
-  background: white;
+.chat-wrapper {
+  position: relative;
+  height: 90vh;
+  max-width: 900px;
+  margin: 20px auto;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  z-index: 999;
+  background-color: #f7fafd;
 }
 
-.drai-close-btn {
-  align-self: flex-end;
-  background: none;
-  border: none;
-  font-size: 18px;
-  padding: 8px;
-  cursor: pointer;
+
+
+/* Customize bot messages */
+.cs-message--incoming .cs-message__content {
+  background-color: #e6f0ff !important;
+  color: #240798 !important;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.drai-messages {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
+/* Customize user messages */
+.cs-message--outgoing .cs-message__content {
+  background-color: #d4edda !important;
+  color: #155724 !important;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.drai-message {
-  padding: 8px;
-  margin-bottom: 8px;
-  border-radius: 10px;
-}
-
-.drai-message.user {
-  background-color: #e1f5fe;
-  align-self: flex-end;
-}
-
-.drai-message.bot {
-  background-color: #fce4ec;
-  align-self: flex-start;
-}
-
-.drai-input {
-  padding: 8px;
-  border: none;
+/* Message input styling */
+.cs-message-input {
+  background-color: #f0f0f0 !important;
   border-top: 1px solid #ccc;
-  outline: none;
 }
 
-.drai-button {
+/* Editor inside input */
+.cs-message-input__content-editor {
+  font-family: 'Segoe UI', sans-serif;
   padding: 10px;
-  background-color: #ff4081;
-  color: white;
-  border: none;
-  cursor: pointer;
-} */
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Floating Chat Button */
-.drai-float-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #ff4081;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  z-index: 9999;
 }
 
-/* Chatbot Container */
-.drai-container {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 300px;
-  height: 400px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  z-index: 9999;
+/* Hide message list scrollbar */
+.cs-message-list::-webkit-scrollbar {
+  display: none;
 }
 
-/* Close Button */
-.drai-close-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  padding: 10px;
-  cursor: pointer;
-  align-self: flex-end;
-}
 
-/* Message Box */
-.drai-messages {
-  flex: 1;
-  padding: 10px;
-  overflow-y: auto;
-  font-size: 14px;
-}
 
-/* Messages */
-.drai-message {
-  margin-bottom: 10px;
-  padding: 8px 12px;
-  border-radius: 12px;
-  max-width: 80%;
-}
 
-.drai-message.user {
-  background-color: #e1f5fe;
-  align-self: flex-end;
-  margin-left: auto;
-}
 
-.drai-message.bot {
-  background-color: #fce4ec;
-  align-self: flex-start;
-  margin-right: auto;
-}
 
-/* Input and Send Button */
-.drai-input {
-  border: none;
-  padding: 10px;
-  border-top: 1px solid #ddd;
-  flex-grow: 1;
-  outline: none;
-}
-
-.drai-button {
-  border: none;
-  background-color: #ff4081;
-  color: white;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-  

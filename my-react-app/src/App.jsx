@@ -119,6 +119,7 @@ import AboutPredict from "./components/About/about";
 import Contact from "./components/Contact/contact";
 import HospitalSearch from "./components/HospitalSearch";  // ✅ Import HospitalSearch
 import DrAi from "./components/chatbot/DrAi";
+
 import './App.css'; // Import global styles
 
 function App() {
