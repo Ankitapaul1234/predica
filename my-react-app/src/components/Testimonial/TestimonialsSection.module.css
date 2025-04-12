@@ -125,13 +125,28 @@
   }
   
   /* 👇 Horizontal Scroll Row */
-  .testimonialsRow {
+  /* .testimonialsRow {
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: y;
     -webkit-overflow-scrolling: touch;
     gap: 2rem;
     padding: 2rem 0;
+  } */
+
+  .testimonialsRow {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 2rem;
+    padding: 2rem 0;
+    height: 100vh; /* This makes the container take the full height of the viewport */
+  }
+
+  .testimonialsRow::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
   }
   
   .testimonialBox {
@@ -187,10 +202,19 @@
   /* Responsive tweaks */
   @media (max-width: 640px) {
     .testimonialsTitle {
-      font-size: 2rem;
+      font-size: 4rem;
     }
     .testimonialsSubText {
-      font-size: 1rem;
+      font-size: 3rem;
     }
-  }
+  } 
+
+
+
+
+
+
+
+
+
   

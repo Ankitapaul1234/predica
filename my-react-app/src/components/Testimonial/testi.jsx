@@ -251,13 +251,13 @@ const TestimonialsSection = () => {
       text: "This website provided me with valuable insights and reassurance.",
       image: "/girls2.jpeg",
       styleClass: "testimonialBoxGreen",
-    },
-    {
-      name: "Priya Desai",
-      text: "I felt supported and informed throughout. This tool is a game-changer for women's health.",
-      image: "/girls.jpeg",
-      styleClass: "testimonialBoxPink",
     }
+    // {
+    //   name: "Priya Desai",
+    //   text: "I felt supported and informed throughout. This tool is a game-changer for women's health.",
+    //   image: "/girls.jpeg",
+    //   styleClass: "testimonialBoxPink",
+    // }
   ];
 
   return (
@@ -309,3 +309,11 @@ const TestimonialsSection = () => {
 };
 
 export default TestimonialsSection;
+
+
+
+
+
+
+
+
