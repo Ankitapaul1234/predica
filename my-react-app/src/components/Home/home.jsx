@@ -474,10 +474,22 @@ const Home = () => {
         </div>
         {/* Footer Section */}
         <footer className={styles.footer}>
-        <p><FaPhone /> +914567890235</p>
-        <p><FaEnvelope /> <a href="mailto:Predica@gmail.com">Predica@gmail.com</a></p>
-          <p>© 2024 Predica. All rights reserved.</p>
-          
+           <p>© 2024 Predica. All rights reserved.</p>
+
+<p>
+  For CONTACT us please click the link :🔗{" "}
+  <Link 
+    to="/contact" 
+    style={{
+      color: 'light blue',
+      textDecoration: 'underline',
+      fontWeight: '500'
+    }}
+  >
+    Contact
+  </Link>
+</p>
+  
         </footer>
       </div>
     </>

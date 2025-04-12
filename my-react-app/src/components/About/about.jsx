@@ -3,6 +3,7 @@
 import React from "react";
 import Navbar from "../navbar/Navbar";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -196,6 +197,19 @@ const About = () => {
         {/* Footer Section */}
         <footer className={styles.footer}>
           <p>© 2024 Predica. All rights reserved.</p>
+          <p>
+  For CONTACT us please click the link :🔗{" "}
+  <Link 
+    to="/contact" 
+    style={{
+      color: 'light blue',
+      textDecoration: 'underline',
+      fontWeight: '500'
+    }}
+  >
+    Contact
+  </Link>
+</p>
         </footer>
       </div>
     </>
