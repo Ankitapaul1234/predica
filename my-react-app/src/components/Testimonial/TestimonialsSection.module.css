@@ -90,7 +90,6 @@
 
 
 
-
    .testimonialsContainerDark {
     background-color: #0f172a;
     color: #f8fafc;
@@ -111,7 +110,7 @@
   .testimonialsTitle {
     font-size: 3rem;
     font-weight: 700;
-    color: #f472b6;
+    color: #f0077f;
     font-style: italic;
   }
   
@@ -124,27 +123,18 @@
     color: #cbd5e1;
   }
   
-  /* 👇 Horizontal Scroll Row */
-  /* .testimonialsRow {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: y;
-    -webkit-overflow-scrolling: touch;
-    gap: 2rem;
-    padding: 2rem 0;
-  } */
-
+  /* Default Horizontal Layout (Large Devices) */
   .testimonialsRow {
     display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
+    flex-direction: row; /* Row by default for larger devices */
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     gap: 2rem;
     padding: 2rem 0;
-    height: 100vh; /* This makes the container take the full height of the viewport */
+    height: auto;
   }
-
+  
   .testimonialsRow::-webkit-scrollbar {
     display: none; /* Hides the scrollbar */
   }
@@ -196,25 +186,37 @@
   .testimonialName {
     font-weight: 600;
     margin-top: 1rem;
-    color: #be185d;
+    color: #f33b88;
   }
   
-  /* Responsive tweaks */
+  /* For Small Devices (Switch to Column Layout) */
+  @media (max-width: 768px) {
+    .testimonialsRow {
+      flex-direction: column; /* Column layout for small screens */
+      overflow-y: auto; /* Enable vertical scroll */
+      scroll-snap-type: y mandatory; /* Ensure snap points are in the Y direction */
+      height: 100vh; /* Full viewport height for scrolling */
+    }
+  
+    .testimonialBox {
+      flex: 0 0 auto;
+      width: 100%; /* Make each box take full width on small devices */
+      padding: 2rem 1rem 1.5rem;
+    }
+  
+    .testimonialImage {
+      width: 50px;
+      height: 50px; /* Smaller image size for small devices */
+    }
+  }
+  
+  /* Responsive tweaks for text sizes */
   @media (max-width: 640px) {
     .testimonialsTitle {
       font-size: 4rem;
     }
     .testimonialsSubText {
-      font-size: 3rem;
+      font-size: 1.5rem;
     }
-  } 
-
-
-
-
-
-
-
-
-
+  }
   
