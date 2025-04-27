@@ -184,12 +184,23 @@ const Precaution = () => {
 
                 {/* Treatment Options Section */}
           <section className={styles.section}>
-            <h2>Breast Cancer Treatment Options</h2>
+            {/* <h2>Breast Cancer Treatment Options</h2>
             <p>If a woman is diagnosed with breast cancer, there are several breast cancer treatment options available. The choice of treatment depends on the stage and type of breast cancer, as well as the patient’s overall health and preferences. Some common treatment options include:</p>
 
             <p>Advancements in breast cancer treatment have significantly improved patient outcomes through a multidisciplinary approach. Initial treatments often involve surgery, such as lumpectomy or mastectomy, depending on tumor size and location. Newer surgical techniques, like skin-sparing and nipple-sparing mastectomies, aim to enhance cosmetic results. Post-surgery, radiation therapy targets remaining cancer cells, while chemotherapy may shrink tumors before surgery or address residual cancer. Hormone therapy, targeted therapy, and immunotherapy further personalize treatment by blocking hormones, targeting specific cancer cell abnormalities, or enhancing the immune system’s response.</p>
 
-            <p>Roche has been pivotal in this field, starting with HERCEPTIN’s approval in 1998 and expanding with subsequent drugs like PERJETA, KADCYLA, and PHESGO. Increased public awareness and innovative therapies are driving progress, with emerging drugs showing promise for more personalized treatments. Companies such as Roche, AstraZeneca, and Olema Pharmaceuticals are at the forefront, developing novel therapies targeting genetic markers and specific pathways. These advancements are expected to enhance survival rates and quality of life for breast cancer patients by offering more tailored and effective treatment options.</p>
+            <p>Roche has been pivotal in this field, starting with HERCEPTIN’s approval in 1998 and expanding with subsequent drugs like PERJETA, KADCYLA, and PHESGO. Increased public awareness and innovative therapies are driving progress, with emerging drugs showing promise for more personalized treatments. Companies such as Roche, AstraZeneca, and Olema Pharmaceuticals are at the forefront, developing novel therapies targeting genetic markers and specific pathways. These advancements are expected to enhance survival rates and quality of life for breast cancer patients by offering more tailored and effective treatment options.</p> */}
+
+
+<h2>Breast Cancer Treatment Options</h2>
+<p>Breast cancer treatment depends on the stage, type, and patient’s health and preferences. Common options include surgery (lumpectomy or mastectomy), radiation therapy, chemotherapy, hormone therapy, targeted therapy, and immunotherapy. Newer surgical techniques like skin-sparing and nipple-sparing mastectomies focus on better cosmetic results.</p>
+
+<p>Advancements by companies like Roche, AstraZeneca, and Olema Pharmaceuticals are driving more personalized treatments. Since HERCEPTIN’s approval in 1998, therapies like PERJETA, KADCYLA, and PHESGO have improved survival rates and quality of life. Emerging therapies targeting genetic markers promise even better outcomes for breast cancer patients.</p>
+
+<h3>Find your nearest hospitals:  </h3>
+<button className="animatedButton" onClick={handleClick}>
+      Find cancerous hospitals
+    </button>
 
             <div
                         className={styles.imageContainer}
@@ -222,11 +233,10 @@ const Precaution = () => {
             </a> */}
 
 
-<h3>Find your nearest hospitals:</h3>
-<button className="animatedButton" onClick={handleClick}>
-      Find cancerous hospitals
-    </button>
 
+              <p>We sincerely hope for the best for you or your loved ones and wish you strength throughout this journey. Thank you for choosing our website as a source of information.
+                 We truly hope that the content here proves helpful in providing the guidance you need. For any additional support, our AI assistant is always available to assist you with further information and personalized help. 
+                 You're not alone — we’re here with you every step of the way.</p>
 
           </section>        
 

@@ -1,9 +1,10 @@
 
 import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import Navbar from "./navbar/Navbar";
+
 
 
 const defaultLocation = { lat: 28.6139, lng: 77.2090 }; // New Delhi
@@ -24,6 +25,7 @@ const hospitalIcon = new L.Icon({
 });
 
 const HospitalLocator = () => {
+  const navigate = useNavigate();
   const [location, setLocation] = useState(null);
   const [hospitals, setHospitals] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -50,7 +52,7 @@ const HospitalLocator = () => {
     setLoading(true);
     setError("");
 
-    const searchRadius = 30000; // 30 km radius
+    const searchRadius = 10000; // 10 km radius
 
     const overpassQuery = `
       [out:json];
@@ -91,7 +93,7 @@ const HospitalLocator = () => {
 
   return (
     <div className="p-6">
-      <Navbar />
+     
       <h1 className="text-2xl font-bold text-center text-white mb-4">
         Find Nearby Cancer & Breast Cancer Hospitals
       </h1>
@@ -161,14 +163,54 @@ const HospitalLocator = () => {
             ))}
           </ul>
         ) : (
-          <p>No hospitals found within 30 km. Try another search.</p>
+          <p>No hospitals found within 10 km. Try another search.</p>
         )}
       </div>
+      <br />
+
+<p>Click below to navigate to the home page:</p>
+
+{/* Buttons for Navigation with Inline Styling */}
+<button 
+  onClick={() => navigate('/')} 
+  style={{ 
+    backgroundColor: '#d81b60', 
+    color: 'white', 
+    padding: '10px 20px', 
+    border: 'none', 
+    borderRadius: '5px', 
+    cursor: 'pointer', 
+    marginBottom: '20px'
+  }}
+>
+  Go to Home Page
+</button>
     </div>
+
+
   );
 };
 
 export default HospitalLocator;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
