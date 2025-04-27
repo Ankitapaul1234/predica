@@ -129,8 +129,8 @@ const About = () => {
                 cancer symptoms, risk factors, and the latest treatment options.
               </li>
               <li>
-                <strong>Advice:</strong> Connect with healthcare professionals
-                for personalized guidance and expert medical advice.
+                <strong>Advice:</strong> Connect with nearby cancer care centers and get expert help from DrAi, 
+                your AI health assistant.
               </li>
               <li>
                 <strong>Precaution:</strong> Personalized preventative measures

@@ -203,6 +203,11 @@ body {
   color: #ff007f; /* Maintain Dark Pink on Click */
 }
 
+.translateWrapper {
+  margin-left: 1rem;
+  display: flex;
+  align-items: center;
+}
 
 
 

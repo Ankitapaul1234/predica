@@ -316,17 +316,17 @@ const Home = () => {
               leading to better medical intervention and outcomes. The color pink
               represents solidarity and breast cancer awareness.
             </h3>
-            <br />
+            {/* <br /> */}
               
               {/* <p>For a doctor’s appointment, click the button below to find Oncologists in your area:</p> */}
               
               {/* <button className={styles.animatedButton}>Start Predict</button> */}
 
               <div>
-      <h2>For test yourself click to START PREDICT:</h2>
-      <button className={styles.animatedButton} onClick={handleStartPredict}>
+      <h2>For test yourself click to START PREDICT : <button className={styles.animatedButton} onClick={handleStartPredict}>
         Start Predict
-      </button>
+      </button></h2>
+      
     </div>
 
           <br />   
@@ -418,16 +418,14 @@ const Home = () => {
                 <div className={styles.featureBox}>
                   <h3>Precaution</h3>
                   <p className={styles.featureDescription}>
-                    Personalized preventative measures to minimize your risk and
-                    promote proactive health management.
+                  Stay proactive in your health journey with guided exercise videos, precautionary tips, and expert-backed diet advice.
                   </p>
                 </div>
 
                 <div className={styles.featureBox}>
                   <h3>Advice</h3>
                   <p className={styles.featureDescription}>
-                    Connect with healthcare professionals for personalized guidance
-                    and expert medical advice.
+                  Access nearby cancer care centers and receive supportive health insights from DrAi, your AI-powered assistant.
                   </p>
                 </div>
               </div>

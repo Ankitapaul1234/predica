@@ -78,8 +78,6 @@ const Precaution = () => {
             
             <h3>7. Previous Breast Conditions</h3>
             <p>Individuals who have previously experienced benign breast conditions, such as atypical hyperplasia or lobular carcinoma in situ (LCIS), have a higher risk of developing invasive breast cancer. Regular monitoring and early detection are crucial in such cases.</p>
-            
-            <p>While it is impossible to eliminate all risk factors, maintaining a healthy lifestyle, performing regular self-examinations, and scheduling routine medical check-ups can aid in early detection and improve treatment outcomes. Consulting with healthcare professionals and undergoing genetic counseling when necessary can further assist in managing breast cancer risks effectively.</p>
           </section>
 
           <br/>
@@ -94,6 +92,28 @@ const Precaution = () => {
             <p>Maintaining a healthy weight is essential for reducing the risk of breast cancer. Studies have shown that being overweight or obese can increase the likelihood of developing breast cancer, especially after menopause. Excess body fat can lead to higher levels of estrogen, which is linked to breast cancer growth. Aim for a balanced diet rich in fruits, vegetables, whole grains, and lean proteins, and monitor your portion sizes to help maintain a healthy weight.</p>
   
                             <br /> 
+
+            
+                            <h3>◻ Healthy Diet Plan for Breast Cancer Prevention</h3>
+<p>Following a balanced diet is crucial for breast cancer prevention. Focus on consuming a variety of fruits, vegetables, whole grains, and legumes, which provide essential vitamins, fiber, and antioxidants that support immune function and reduce inflammation. Incorporate foods rich in omega-3 fatty acids like salmon, flaxseeds, and walnuts, and limit red meat, processed foods, and sugary beverages. Choosing organic produce when possible and reducing exposure to pesticides may also help. Staying hydrated and practicing mindful eating habits are additional steps toward better overall health and cancer prevention.</p>
+
+<br />
+
+{/* Diet Plan Video Section */}
+<div className={styles.videoWrapper}>
+  <iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/WZqq5jr4guU"
+    title="Breast Cancer Prevention Diet Plan"
+    frameBorder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allowFullScreen
+  ></iframe>
+</div>
+
+<br />
+
 
             <h3>◻ Exercising Regularly</h3>
             <p>Exercising regularly is another critical precaution for breast cancer. Physical activity helps control weight, reduces estrogen levels, and improves overall health. Aim for at least 150 minutes of moderate aerobic exercise or 75 minutes of vigorous exercise each week, combined with strength training exercises at least twice a week. Activities like walking, swimming, cycling, or group fitness classes can be enjoyable ways to incorporate exercise into your routine.</p>
@@ -115,34 +135,52 @@ const Precaution = () => {
 
           <br />
 
-            <h3>◻ Limiting Alcohol Consumption</h3>
-            <p>Limiting alcohol consumption is an important precaution for breast cancer. Research has shown that even moderate alcohol intake can increase the risk of breast cancer. The American Cancer Society recommends that women limit their alcohol consumption to no more than one drink per day. If you do not drink alcohol, it is best not to start.</p>
-              
-              <br /> 
+          <h3>◻ Avoiding Alcohol and Smoking</h3>
+<p>Limiting alcohol consumption and avoiding smoking are crucial precautions for reducing the risk of breast cancer. Research shows that even moderate alcohol intake can increase breast cancer risk, so it is recommended that women limit alcohol to no more than one drink per day or avoid it entirely. Likewise, smoking has been linked to various types of cancer, including breast cancer. Quitting smoking can significantly lower the risk and improve overall health.</p>
 
-            <h3>◻ Avoiding Smoking</h3>
-            <p>Avoiding smoking is crucial for overall health and is a significant precaution for breast cancer. Smoking has been linked to various types of cancer, including breast cancer. If you smoke, seek help to quit, as this can significantly reduce your risk of developing breast cancer and improve your overall health.</p>
+<br />
+
+
               
-              <br /> 
+         
+
+<div
+              className={styles.imageContainer}
+              style={{ width: "600px", height: "auto", margin: "20px auto" }}
+            >
+              <img
+                src="src/img/precaution.jpg"
+                alt="Breast Cancer Awareness"
+                className={`${styles.image} ${styles.animatedImage}`}
+              />
+            </div>
+
+            <br />
 
             <h3>◻ Breastfeeding, If Possible</h3>
             <p>Breastfeeding can also serve as a precaution for breast cancer. Research indicates that women who breastfeed may have a lower risk of developing breast cancer, particularly if they breastfeed for an extended period. Breastfeeding helps to reduce the number of menstrual cycles a woman experiences, which in turn lowers estrogen levels. If you are able to breastfeed, consider doing so for at least six months to reap the potential protective benefits.</p>
           </section>
 
-          <br />
-
-          <div
-                        className={styles.imageContainer}
-                        style={{ width: "600px", height: "auto", margin: "20px auto" }}
-                      >
-                        <img
-                          src="src/img/precaution.jpg"
-                          alt="Breast Cancer Awareness"
-                          className={`${styles.image} ${styles.animatedImage}`}
-                        />
-                      </div>
 
                       <br />
+
+{/* Extra Tips to Prevent Breast Cancer */}
+<h3>◻ Extra Tips to Prevent Breast Cancer</h3>
+  <p>Along with maintaining a healthy lifestyle, following additional preventive measures can further reduce the risk of breast cancer. Staying informed, regular screenings, managing stress, and avoiding exposure to harmful chemicals are all important steps toward better breast health.</p>
+
+  <div className={styles.videoWrapper}>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/yyY5A7HnGrA"
+      title="Extra Tips for Breast Cancer Prevention"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
+
+  <br />
 
                 {/* Treatment Options Section */}
           <section className={styles.section}>

@@ -175,12 +175,16 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 
+
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
+
 
   return (
     <nav className={styles.navbar}>
@@ -210,6 +214,10 @@ const Navbar = () => {
             </div>
           )}
         </div>
+
+
+
+
 
         {/* Login Button */}
         <Link to="/login">
@@ -278,4 +286,21 @@ export default Navbar;
 // };
 
 // export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
