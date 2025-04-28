@@ -1,0 +1,187 @@
+/* BreastCancerPredictionQuiz.css */
+
+/* .quiz-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease forwards;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .question {
+    margin-bottom: 25px;
+  }
+  
+  .option {
+    display: block;
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .submit-button {
+    display: block;
+    margin: 30px auto 10px;
+    padding: 10px 30px;
+    background: #5c6bc0;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background: #3f51b5;
+  }
+  
+  .result {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 24px;
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease both;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  } */
+
+
+
+
+/* Dark Theme Background */
+.quizContainer {
+    background-color: #121212;
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Title */
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #f8bbd0;
+  }
+  
+  /* Question Section */
+  .question {
+    margin-bottom: 2rem;
+  }
+  
+  /* Option */
+  .option {
+    display: block;
+    margin: 0.5rem 0;
+    cursor: pointer;
+  }
+  
+  .option input {
+    margin-right: 0.5rem;
+  }
+  
+  /* Next and Submit Buttons */
+  .nextButton, .submitButton {
+    background-color: #d81b60; /* Dark pink */
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 2rem auto;
+  }
+  
+  .nextButton:hover, .submitButton:hover {
+    background-color: #c2185b;
+  }
+  
+  /* Result Section */
+  .result {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
+  
+  /* Risk Colors */
+  .highRisk {
+    color: #ff5252;
+    font-weight: bold;
+  }
+  
+  .mediumRisk {
+    color: #ffc107;
+    font-weight: bold;
+  }
+  
+  .lowRisk {
+    color: #00e676;
+    font-weight: bold;
+  }
+  
+  .noRisk {
+    color: #00ff7f;
+    font-weight: bold;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Fade In Animation */
+  .fadeIn {
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  

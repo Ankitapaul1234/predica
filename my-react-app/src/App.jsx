@@ -119,6 +119,7 @@ import AboutPredict from "./components/About/about";
 import Contact from "./components/Contact/contact";
 import HospitalSearch from "./components/HospitalSearch";  // ✅ Import HospitalSearch
 import DrAi from "./components/chatbot/DrAi";
+import BreastCancerPredictionQuiz from "./components/Predictmcq/predictmcq";
 
 import './App.css'; // Import global styles
 
@@ -140,6 +141,7 @@ function App() {
         <Route path="/drai" element={<DrAi />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/hospitals" element={<HospitalSearch />} />
+        <Route path="/BreastCancerPredictionQuiz" element={<BreastCancerPredictionQuiz />} />
       </Routes>
     </Router>
   );
