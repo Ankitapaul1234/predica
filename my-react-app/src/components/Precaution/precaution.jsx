@@ -245,13 +245,13 @@ const Precaution = () => {
         </div>
         {/* Footer Section */}
         <footer className={styles.footer}>
-          <p>© 2024 Predica. All rights reserved.</p>
+          
           <p>
   For CONTACT us please click the link :🔗{" "}
   <Link 
     to="/contact" 
     style={{
-      color: 'light blue',
+      color: 'blue',
       textDecoration: 'underline',
       fontWeight: '500'
     }}
@@ -259,6 +259,7 @@ const Precaution = () => {
     Contact
   </Link>
 </p>
+<p>© 2024 Predica. All rights reserved.</p>
         </footer>
       </div>
     </>

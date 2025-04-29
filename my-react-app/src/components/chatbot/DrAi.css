@@ -1,15 +1,79 @@
 /* DrAi.css */
 
-.chat-wrapper {
+/* .chat-wrapper {
   position: relative;
   height: 90vh;
   max-width: 900px;
-  margin: 20px auto;
+   margin: 20px auto; 
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
   overflow: hidden;
   background-color: #f7fafd;
+  
+} */
+
+
+
+
+/* @keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  }
+  50% {
+    box-shadow: 0 0 10px #00aaff, 0 0 20px #00aaff, 0 0 30px #00aaff;
+  }
+  100% {
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  }
+} */
+
+
+@keyframes glowAnimation {
+  0% {
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  }
+  50% {
+    box-shadow: 0 0 10px #66ccff, 0 0 20px #66ccff, 0 0 30px #66ccff; /* Lighter blue */
+  }
+  100% {
+    box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  }
 }
+
+.chat-wrapper {
+  position: relative;
+  height: 90vh;
+  max-width: 900px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #f7fafd;
+  margin-left: 20px;
+  animation: glowAnimation 2s ease-in-out infinite; /* Apply the glowing animation */
+}
+
+/* For tablets and above */
+@media (min-width: 768px) {
+  .chat-wrapper {
+    margin-left: 40px;
+  }
+}
+
+/* For desktops and large screens */
+@media (min-width: 1024px) {
+  .chat-wrapper {
+    margin-left: 80px;
+  }
+}
+
+/* Optional: Center on very large screens */
+@media (min-width: 1440px) {
+  .chat-wrapper {
+    margin-left: 250px;
+    margin-right: 50px;
+  }
+}
+
 
 
 
@@ -47,6 +111,70 @@
 .cs-message-list::-webkit-scrollbar {
   display: none;
 }
+
+
+.main-container {
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;              /* Responsive height */
+  position: relative;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+/* Optional: Tweak for smaller screens */
+@media (max-width: 600px) {
+  .main-container {
+    height: 90vh;           /* More height on small screens */
+    max-width: 95%;
+  }
+}
+
+
+
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+/* Responsive tweak for smaller screens */
+@media (max-width: 600px) {
+  .chat-container {
+    max-width: 95%;
+    padding: 0 10px;
+  }
+}
+
+
+.custom-message-input {
+  width: 700px;
+  max-width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+  .custom-message-input {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .custom-message-input {
+    max-width: 300px;
+  }
+}
+
+
+
+
+
+
 
 
 

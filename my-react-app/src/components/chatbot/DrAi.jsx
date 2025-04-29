@@ -353,9 +353,30 @@ const DrAi = () => {
   };
 
   return (
-    <div className="chat-wrapper" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <MainContainer style={{ width: "100%", maxWidth: "800px", height: "600px" }}>
-        <ChatContainer>
+    <div className="back">
+    <h2>Welcome to Ai Assistant</h2>
+    <div className="chat-wrapper">
+      <MainContainer   style={{
+      width: "100%",
+      maxWidth: "800px",
+      height: "80vh",
+      minHeight: "500px",
+      position: "relative",
+      boxShadow: "0 4px 14px rgba(0, 0, 0, 0.1)",
+      borderRadius: "16px",
+      overflow: "hidden",
+      backgroundColor: "#f7fafd",
+    }}>
+
+
+        <ChatContainer  style={{
+    width: "100%",
+    maxWidth: "1200px", // Wider on larger screens
+    height: "100%",
+    padding: "0 10px",
+    boxSizing: "border-box",
+  }}
+>
           <MessageList>
             {chatHistory.map((elt, i) => (
               <Message
@@ -369,8 +390,8 @@ const DrAi = () => {
               />
             ))}
             
-            {/* Show typing indicator when AI is typing */}
-            {isTyping && (
+            {/* Show typing indicator when AI is typing  */}
+             {isTyping && (
               <Message
                 model={{
                   message: "AI Assistant is typing...",
@@ -380,8 +401,11 @@ const DrAi = () => {
                 }}
               />
             )}
+
+
           </MessageList>
           <MessageInput
+          className="custom-message-input"
             placeholder="Type message here"
             value={userInput}
             onChange={(val) => handleUserInput(val)}
@@ -395,18 +419,58 @@ const DrAi = () => {
         onClick={() => navigate("/")}
         style={{
           marginTop: "20px",
-          padding: "10px 20px",
+          padding: "20px 20px",
           backgroundColor: "#2d89ef",
           color: "#fff",
           border: "none",
           borderRadius: "6px",
           cursor: "pointer",
+          
+         
         }}
       >
         Go to Home
       </button>
     </div>
+    </div>
   );
 };
 
 export default DrAi;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

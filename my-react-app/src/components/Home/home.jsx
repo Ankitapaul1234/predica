@@ -425,7 +425,7 @@ const Home = () => {
                 <div className={styles.featureBox}>
                   <h3>Advice</h3>
                   <p className={styles.featureDescription}>
-                  Access nearby cancer care centers and receive supportive health insights from DrAi, your AI-powered assistant.
+                  Access nearby cancer care centers and receive supportive health insights from AI-powered assistant.
                   </p>
                 </div>
               </div>
@@ -478,14 +478,14 @@ const Home = () => {
         </div>
         {/* Footer Section */}
         <footer className={styles.footer}>
-           <p>© 2024 Predica. All rights reserved.</p>
+           
 
 <p>
   For CONTACT us please click the link :🔗{" "}
   <Link 
     to="/contact" 
     style={{
-      color: 'light blue',
+      color: 'blue',
       textDecoration: 'underline',
       fontWeight: '500'
     }}
@@ -493,6 +493,8 @@ const Home = () => {
     Contact
   </Link>
 </p>
+
+<p>© 2024 Predica. All rights reserved.</p>
   
         </footer>
       </div>
