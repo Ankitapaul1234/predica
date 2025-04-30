@@ -33,7 +33,7 @@
     box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
   }
   50% {
-    box-shadow: 0 0 10px #66ccff, 0 0 20px #66ccff, 0 0 30px #66ccff; /* Lighter blue */
+    box-shadow: 0 0 8px #66ccff, 0 0 15px #66ccff, 0 0 24px #66ccff; /* Lighter blue */
   }
   100% {
     box-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
