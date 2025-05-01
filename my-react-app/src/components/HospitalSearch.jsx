@@ -95,7 +95,7 @@ const HospitalLocator = () => {
     <div className="p-6">
      
       <h1 className="text-2xl font-bold text-center text-white mb-4">
-        Find Nearby Cancer & Breast Cancer Hospitals
+        Find Nearby Cancer Hospitals
       </h1>
 
       {/* Search Buttons */}

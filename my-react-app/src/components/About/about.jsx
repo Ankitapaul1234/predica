@@ -153,15 +153,14 @@ const About = () => {
                 Frequently Asked Questions
               </h2>
               <div className={styles.faqContainer}>
-                <div className={styles.faqItem}>
+              <div className={styles.faqItem}>
                   <h3 className={styles.faqQuestion}>
                     Is Predica a substitute for a doctor's visit?
                   </h3>
                   <h4 className={styles.faqAnswer}>
-                    No, Predica is not a substitute for professional medical
-                    advice. It is designed to provide insights based on your
-                    data and should be used as a tool to inform discussions with
-                    your healthcare provider.
+                  No, Predica is not a substitute for medical advice. 
+                  It offers insights, helps locate nearby cancer hospitals on a map, 
+                  and provides AI-based support to assist your healthcare journey.
                   </h4>
                 </div>
               </div>
@@ -186,9 +185,10 @@ const About = () => {
                 </h4>
               </div>
               <div className={styles.faqItem}>
-              <h3 className={styles.faqQuestion}>What data is required for Predict to generate results?</h3>
+              <h3 className={styles.faqQuestion}>What if I don't have test results?</h3>
               <h4 className={styles.faqAnswer}>
-              Predict requires data such as tumor size, lymph node involvement, hormone receptor status, and other clinical factors to estimate survival rates.
+              You can still get a basic risk assessment by answering a few quick questions. 
+              For more accurate predictions, use your test results on the prediction page.
               </h4>
             </div>
             </section>
