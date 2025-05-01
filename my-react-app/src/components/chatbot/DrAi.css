@@ -164,7 +164,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 535px) {
   .custom-message-input {
     max-width: 300px;
   }
